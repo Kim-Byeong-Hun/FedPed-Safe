@@ -45,14 +45,14 @@ UP-FALL
 
 Convert the original files of the UP-FALL dataset into a systematically organized folder structure. The following command organizes the data in the **UP-FALL** folder into the **UP-FALL-output** folder.
 ```bash
-python data/folder.py --base_folder UP-FALL --output_folder UP-FALL-output
+python upfall/folder.py --base_folder UP-FALL --output_folder UP-FALL-output
 ```
 
 Preprocessing is performed using the YOLOv8 model based on the organized data. In this process, image data is loaded from the specified input folder to extract keypoints feature, and the **cropped image and keypoint file are saved**. The results are saved in the **UP-FALL-output2** folder.
 
 Please refer to the description in the code(pre-processing.py) for additional options for saving.
 ```bash
-python data/pre-processing.py --input_folder UP-FALL-output --output_folder UP-FALL-final --model_path ./yolov8m-pose.pt --save_options crop keypoints
+python upfall/pre-processing.py --input_folder UP-FALL-output --output_folder UP-FALL-final --model_path ./yolov8m-pose.pt --save_options crop keypoints
 ```
 
 Finally, the organization of folders is as follows:
@@ -96,8 +96,8 @@ The AI-Hub dataset should be organized in the same method as the UP-FALL dataset
  
 The following code can be used to organize the folder structure.
 ```bash
-python data/aihub_folder.py --base_folder AIHub --output_folder AIHub-output
-python data/aihub_feature.py --input_folder AIHub-output --output_folder AIHub-final --model_path ./yolov8m-pose.pt --save_options crop keypoints
+python aihub/folder.py --base_folder AIHub --output_folder AIHub-output
+python aihub/feature.py --input_folder AIHub-output --output_folder AIHub-final --model_path ./yolov8m-pose.pt --save_options crop keypoints
 ```
 
 Finally, the organization of folders is as follows:
