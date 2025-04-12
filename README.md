@@ -1,4 +1,4 @@
-# FedPed-Safe
+# FedPed-Safe (Unreleased — full update coming soon)
 Pedestrian Collapse Detection Method with Federated Spatio-Temporal Transformers in Distributed Road Surveillance Systems
 
 ![Concept of federated learning (FL)](figs/Fig1.png)
